@@ -3,13 +3,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: url(bg.jpg), #000;
+    background: url(./images/bg.jpg), #000;
     background-size: cover;
     color: #fff;
     font-family: "Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
 }
 
 /* Nav */
@@ -17,6 +21,8 @@ nav {
     width: 100%;
     height: 75px;
     background: #4570a3;
+    position: sticky;
+    top: 0;
 }
 
 nav h1 {
@@ -55,7 +61,7 @@ nav ul li a i {
 /* Cards */
 #life {
     padding: 30px;
-    height: fit-content;
+    min-height: fit-content;
 }
 
 .life-title {
@@ -63,20 +69,23 @@ nav ul li a i {
     color: #fff;
     font-family: "Arvo", serif;
     font-weight: 500;
+    color: #79d9ff;
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     height: fit-content;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .box {
-    margin: 10px;
+    margin: 20px;
     min-height: fit-content;
+    height: 600px;
     box-shadow: -1px 0 10px #04F6F8;
     /* background: rgba(69, 112, 163, 0.6); */
     background: rgba(26, 42, 75, 0.7);
@@ -87,17 +96,34 @@ nav ul li a i {
     gap: 10px;
 }
 
-.box img {
+.life-img {
     width: 100%;
     height: 250px;
+    overflow: hidden;
     border-radius: 8px;
+}
+.life-img img {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 8px; */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: height ease 0.5s, width ease 0.5s;
+}
+
+.box:hover img {
+    width: 120%;
+    height: 120%;
+    
 }
 
 /* Footer */
 footer {
+    width: 100%;
+    height: fit-content;
     position: relative;
     bottom: 0;
-    width: 100%;
     color: #fff;
     text-align: center;
     font-size: 16px;
@@ -105,6 +131,7 @@ footer {
     padding-bottom: 10px;
     background-color: rgba(0, 14, 41, 0.612);
 }
+
 
 .footer-content p {
     max-width: 500px;

@@ -6,10 +6,13 @@
 }
 
 body {
-    background: url(bg.jpg), #000;
+    background: url(./images/bg.jpg), #000;
     background-size: cover;
     color: #fff;
     font-family: "Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Nav */
